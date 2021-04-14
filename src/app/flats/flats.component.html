@@ -1,0 +1,17 @@
+<div class="row" style="margin: 15px; display: flex; justify-content: center;"> 
+    <div *ngFor="let data of datas; let i = index" class="col-md-6" style="margin: 0; padding: 20px;">
+        <div style="border: 1px solid #e8e8e9;  background-color: #f6f6f6; border-radius: 2%; padding: 0; display: flex; flex-direction: row;" >
+            <img style="border-radius: 10%; padding: 10px; max-width: 250px;"  src="assets/img/casaLaFlora.PNG">
+            <div style="padding: 10px;">
+                <p style="margin: 0; color: #0275d8; font-size: 12px;">Ferienwohnung</p>
+                <p style="margin: 0; font-weight: bold;">{{data.quadratMeter}}<sup>2</sup>, {{data.etage}}</p>
+                <p style="margin: 0; font-size: 12px;">{{data.text}}</p>
+                <a href="/flat/{{i}}">Mehr...</a>
+                <p><i class="material-icons">place</i>{{data.adresse}}</p> 
+                <div style="position: absolute; bottom: 0; width: 200p; padding: 30px; right: 0;">
+                    <span >CHF</span> <span style="font-size: 30px;">{{data.preis}}</span> 
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { FlatComponent } from './flat/flat.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { FlatsComponent } from './flats/flats.component';
+import { AgmComponent } from './agm/agm.component';
 
 
 
@@ -30,7 +33,10 @@ import { ImpressumComponent } from './impressum/impressum.component';
     FlatComponent,
     ContactComponent,
     FooterComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    FlatsComponent,
+    AgmComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,10 @@ import { ImpressumComponent } from './impressum/impressum.component';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD4QAU8SESL9suBRIIAXJ3PCPfAXgAFO1s'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
