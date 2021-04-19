@@ -41,8 +41,17 @@
         </div>
         
 
-        <div class="row col-md-12" style="margin: 20px; display: flex; justify-content: center;">
+        <div class="row col-md-12" style="margin: 0px; padding: 20px; display: flex; justify-content: center;">
             <app-agm></app-agm> 
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <table>
+                <tr style="display: inline;" *ngFor="let data of kalender; let i = index">
+                <div *ngIf="(i+1)%7==1;"></div>
+                    <td *ngIf="kalenderWhite[i] == true; else elseBlock" style="width: 50px; text-align: center; background-color: white; border-style: solid;">{{data}}</td> 
+                    <ng-template #elseBlock ><td style="width: 50px; text-align: center; background-color: grey; border-style: solid;">{{data}}</td></ng-template>
+                </tr>
+            </table>
         </div>
   
     </div>  

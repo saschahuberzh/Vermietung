@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { FlatsComponent } from './flats/flats.component';
 import { AgmComponent } from './agm/agm.component';
+import { PaymeComponent } from './payme/payme.component';
 
 
 
@@ -36,6 +37,7 @@ import { AgmComponent } from './agm/agm.component';
     ImpressumComponent,
     FlatsComponent,
     AgmComponent,
+    PaymeComponent,
     
   ],
   imports: [
